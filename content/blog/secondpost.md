@@ -1,12 +1,13 @@
 ---
-title: This is my second post with a much longer title.
-description: This is a post on My Blog about leveraging agile frameworks.
 date: 2018-07-04
+image: "https://picsum.photos/id/58/800/400"
+title: This is my second post with a much longer title.
+lead: This is a post on My Blog about leveraging agile frameworks.
+categories:
+  - Test category
 tags:
   - number 2
   - cat
-category:
-  - testingnesting
 ---
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 

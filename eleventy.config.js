@@ -76,20 +76,6 @@ module.exports = function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
 
-	// Customize Markdown library settings:
-	eleventyConfig.amendLibrary("md", mdLib => {
-		mdLib.use(markdownItAnchor, {
-			permalink: markdownItAnchor.permalink.ariaHidden({
-				placement: "after",
-				class: "header-anchor",
-				symbol: "#",
-				ariaHidden: false,
-			}),
-			level: [1,2,3,4],
-			slugify: eleventyConfig.getFilter("slugify")
-		});
-	});
-
 	// Features to make your build faster (when you need them)
 
 	// If your passthrough copy gets heavy and cumbersome, add this line

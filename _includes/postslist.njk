@@ -10,7 +10,8 @@
 
             <div class="postlist-details">
                 <div class="postlist-meta">
-                    <!--a href="/collections/{{ post.data.categories | safe }}" class="postlist-category">{{ post.data.categories | safe }}</a-->
+	                 <a href="/tags/{{ post.data.tags[1] | slugify }}" class="postlist-category">{{ post.data.tags[1] }}</a>
+
                     <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("yyyy LLLL dd.") }}</time>
                 </div>
                 
@@ -20,8 +21,6 @@
                     <p class="postlist-lead">
                         {{ post.data.lead | safe }}
                     </p>
-
-                    <!--a class="read-more-link" href="{{ post.url }}">Read more <span aria-hidden="true">→</span></a-->
                 {% endif %}
             </div>
         </li>

@@ -29,8 +29,8 @@
 }
 
 .postlist-category {
-    background-color: #c97100;;
-    border-radius: 4px;
+    background-color: #c97100;
+    border-radius: 2px;
     color: #fff;
     display: inline-block;
     font-weight: 700;
@@ -38,7 +38,7 @@
 }
 
 .postlist-date {
-    color: #ac94b2;
+    color: #c4d6d9;
 }
 
 .postlist-image {

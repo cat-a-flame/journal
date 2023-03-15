@@ -2,15 +2,14 @@
 date: 2022-02-02T18:00:00
 title: 'Research case study: Mol Bubi'
 lead: "Mol Bubi is a bike-sharing system in Hungary. I have worked on this project as part of a course called MOME Insight."
-categories: Case Study
 tags:
+ - Case Study
  - UX Research
+ - Research methodologies
 socialImage: ./blog/images/molbubi/molbubi.jpg
 socialImageWebP: ./blog/images/molbubi/molbubi.webp
 image: ./blog/images/molbubi/molbubi.webp
 ---
-
-categories={{ categories | dump | safe }}
 
 ## Context and background
 I have participated in a User Researcher course called MOME Insight in September, 2021, a practical training that focuses on research, with Hungary's experienced research professionals sharing their knowledge. The course builds on the basics of UX, and is complemented by knowledge of commonly used research methods (interviewing, diary study, observation, questionnaires, usability testing), their practical application, and directly applicable advice.

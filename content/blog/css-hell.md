@@ -2,10 +2,8 @@
 date: 2022-02-07T15:45:00
 title: 'CSS Hell'
 lead: "A collection of common CSS mistakes, and how to fix them."
-tags:
- - Project showcase
- - Webdevelopment
- - CSS
+categories: ["Development"]
+tags: ["CSS","web development"]
 socialImage: ./blog/images/csshell/csshell.jpg
 socialImageWebP: ./blog/images/csshell/csshell.webp
 image: ./blog/images/csshell/csshell.webp

@@ -10,7 +10,10 @@
 
             <div class="postlist-details">
                 <div class="postlist-meta">
-	                 <a href="/tags/{{ post.data.tags[1] | slugify }}" class="postlist-category">{{ post.data.tags[1] }}</a>
+                    {% set ctList = post | catTagList %}
+                    {% for ct in ctList %}
+                       <a href="{{ct.url}}" class="postlist-category">{{ct.name}}</a>
+                    {% endfor %}
 
                     <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("yyyy LLLL dd.") }}</time>
                 </div>

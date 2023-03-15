@@ -76,6 +76,49 @@ module.exports = function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
 
+
+	/* Setting up the categories */
+	eleventyConfig.addFilter('myEscape', s => {
+		return s.replace(/ /g, '-');
+	});
+	
+	eleventyConfig.addFilter('catTagList', p => {
+		let result = [];
+		for(let i=0; i<p.data.categories.length; i++) {
+			result.push({
+				name: p.data.categories[i],
+				url: '/categories/'+eleventyConfig.getFilter('myEscape')(p.data.categories[i])
+			});
+		}  
+	  return result;
+	});
+
+	eleventyConfig.addFilter('getByCategory', (posts,cat) => {
+		let results = [];
+	
+		// handle case issues I'm having
+		cat = cat.toLowerCase();
+		for(let post of posts) {
+			if(post.data.categories.indexOf(cat) >= 0) results.push(post);
+		}
+		return results.reverse();
+	});
+	
+	let postCats = [];
+	eleventyConfig.addFilter('postCategories', collections => {
+		if(postCats.length > 0) return postCats;
+		let cats = new Set();
+	
+		for(let page of collections.posts) {
+			for(let cat of page.data.categories) {
+				cat = cat.toLowerCase();
+				cats.add(cat);
+			}
+		}
+		postCats = Array.from(cats).sort();
+		return postCats;
+	  });
+
 	// Features to make your build faster (when you need them)
 
 	// If your passthrough copy gets heavy and cumbersome, add this line

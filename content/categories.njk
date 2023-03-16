@@ -1,0 +1,30 @@
+---
+pagination:
+    data: collections.categories
+    size: 1
+    alias: cat
+    filter:
+    - all
+    - post
+    - posts
+    - tagList
+    addAllPagesToCollections: true
+layout: layouts/home.njk
+permalink: /categories/{{ cat | slugify }}/
+---
+
+
+
+<h1>Category: {{ cat }}</h1>
+
+
+
+
+------<br>
+
+{% set postslist = collections[ cat ] %}
+{% include "postslist.njk" %}
+
+<br>------
+
+<p>See <a href="/categories/">all categories</a>.</p>

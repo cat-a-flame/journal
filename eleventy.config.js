@@ -119,6 +119,19 @@ module.exports = function(eleventyConfig) {
 		return postCats;
 	  });
 
+	eleventyConfig.addCollection("categories", collection => {
+		let cats = new Set();
+		let posts = collection.getFilteredByTag("posts");
+		for(let i=0;i<posts.length;i++) {
+			for(let x=0;x<posts[i].data.categories.length;x++) {
+				cats.add(posts[i].data.categories[x].toLowerCase());
+			}
+		}
+		return Array.from(cats).sort();
+	});
+
+
+
 	// Features to make your build faster (when you need them)
 
 	// If your passthrough copy gets heavy and cumbersome, add this line

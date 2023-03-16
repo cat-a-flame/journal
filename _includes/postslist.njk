@@ -1,31 +1,23 @@
 <ol reversed class="postlist">
     {% for post in postslist | reverse %}
-        <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-            
-            {% if post.data.image %}
-                <div>
-                    <img class="postlist-image" src="{{ post.data.image }}" alt="" />
-                </div>
-            {% endif %}
-
-            <div class="postlist-details">
-                <div class="postlist-meta">
-                    {% set ctList = post | catTagList %}
-                    {% for ct in ctList %}
-                       <a href="{{ct.url}}" class="postlist-category">{{ct.name}}</a>
-                    {% endfor %}
-
-                    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("yyyy LLLL dd.") }}</time>
-                </div>
-                
+        {% if loop.first %}
+            <li class="postlist-item-latest">
                 <a href="{{ post.url }}" class="postlist-link">{{ post.data.title }}</a>
 
-                {% if post.data.lead %}
-                    <p class="postlist-lead">
-                        {{ post.data.lead | safe }}
-                    </p>
-                {% endif %}
-            </div>
-        </li>
+                <p class="postlist-lead">{{ post.data.lead | safe }}</p>
+
+                <em class="postlist-meta">Published on <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("yyyy LLLL dd.") }}</time> in the 
+                {% for ct in post | catTagList %}<span>{{ct.name}}</span>{% endfor %} category</em>
+
+
+                <div class="postlist-previous">Previous posts</div>
+            </li>
+        {% else %}
+            <li class="postlist-item">
+                <a href="{{ post.url }}" class="postlist-link">{{ post.data.title }}</a>
+
+                <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("yyyy LLLL dd.") }}</time>
+            </li>
+        {% endif %}
     {% endfor %}
 </ol>

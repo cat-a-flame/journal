@@ -1,23 +1,12 @@
 ---
-pagination:
-  data: collections
-  size: 1
-  alias: tag
-  filter:
-    - all
-    - post
-    - posts
-    - tagList
-    - categories
-  addAllPagesToCollections: true
 layout: layouts/home.njk
-permalink: /tags/{{ tag | slugify }}/
+eleventyNavigation:
+  key: Archive
+  order: 10
 ---
-<h1 class="listpage-title">Tagged as "{{ tag }}"</h1>
+<h1 class="listpage-title">Archive</h1>
 
-{% set postslist = collections[ tag ] %}
-
-
+{% set postslist = collections.posts %}
 <ol reversed class="postlist">
     {% for post in postslist | reverse %}
         <li class="postlist-item">
@@ -27,5 +16,3 @@ permalink: /tags/{{ tag | slugify }}/
         </li>
     {% endfor %}
 </ol>
-
-<div class="more-posts"><a href="/tags/">View all categories</a></div>

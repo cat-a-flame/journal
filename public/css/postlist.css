@@ -27,7 +27,7 @@
     }
 
 .postlist-date {
-    background-color: #fff;
+    background-color: var(--light-bg-color);
     color: var(--secondary-color);
     padding-left: .625rem;
     position: relative;
@@ -42,14 +42,23 @@
     }
 
 .postlist-link {
-    background-color: #fff;
-    font-family: 'Lora', serif;
+    background-color: var(--light-bg-color);
+    font-family: var(--title-font);
     font-size: 1.2rem;
     font-style: italic;
     padding-right: .5rem;
     position: relative;
     z-index: 1;
  }
+    @media screen and (max-width: 42rem) {
+        .postlist-link {
+            padding-right: 0;
+        }
+    }
+
+.postlist-category {
+    color: var(--dark-link-color);
+}
 
  .more-posts {
     letter-spacing: .2rem;

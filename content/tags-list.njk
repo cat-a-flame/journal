@@ -2,11 +2,13 @@
 permalink: /tags/
 layout: layouts/home.njk
 ---
-<h1>Tags</h1>
+<h1 class="listpage-title">Tags</h1>
 
-<ul>
-{% for tag in collections.all | getAllTags | filterTagList %}
-	{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></li>
-{% endfor %}
+<ul class="postlist">
+    {% for tag in collections.tagList %}
+        <li class="postlist-item">
+            <a href="/tags/{{ tag.title | slug }}/" class="postlist-link">{{ tag.title }}</a>
+            <span class="postlist-count">{{ tag.count.length }} post{% if tag.count.length >= 2 %}s{% endif %}</span>
+        </li>
+    {% endfor %}
 </ul>

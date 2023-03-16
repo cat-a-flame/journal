@@ -7,8 +7,10 @@
                 <p class="postlist-lead">{{ post.data.lead | safe }}</p>
 
                 <em class="postlist-meta">Published on <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("yyyy LLLL dd.") }}</time> in the 
-                {% for ct in post | catTagList %}<span>{{ct.name}}</span>{% endfor %} category</em>
-
+                {% for ct in post | catTagList %}
+                    <a href="{{ ct.url }}" class="postlist-category">{{ct.name}}</a>
+                {% endfor %}
+                category</em>
 
                 <div class="postlist-previous">Previous posts</div>
             </li>

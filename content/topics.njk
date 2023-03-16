@@ -1,9 +1,11 @@
 ---
 layout: layouts/base.njk
-permalink: /categories/
+permalink: /topics/
 ---
 
-<h1 class="listpage-title">Categories</h1>
+<h1 class="listpage-title">Topics</h1>
+
+<h2 class="listpage-subtitle">Categories</h2>
 
 <ul class="postlist">
     {% for cat in collections.categories %}
@@ -14,6 +16,17 @@ permalink: /categories/
         <li class="postlist-item">
             <a href="{{ catUrl }}" class="postlist-link">{{ cat }}</a>
             <span class="postlist-count">{{ postsCount.length }} post{% if postsCount.length >= 2 %}s{% endif %}</span>
+        </li>
+    {% endfor %}
+</ul>
+
+<h2 class="listpage-subtitle">Tags</h2>
+
+<ul class="postlist">
+    {% for tag in collections.tagList %}
+        <li class="postlist-item">
+            <a href="/tags/{{ tag.title | slug }}/" class="postlist-link">{{ tag.title }}</a>
+            <span class="postlist-count">{{ tag.count.length }} post{% if tag.count.length >= 2 %}s{% endif %}</span>
         </li>
     {% endfor %}
 </ul>

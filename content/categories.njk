@@ -13,18 +13,18 @@ layout: layouts/home.njk
 permalink: /categories/{{ cat | slugify }}/
 ---
 
+<h1 class="listpage-title">Category: {{ cat }}</h1>
 
+{% set posts = collections.posts | getByCategory(cat) %}
 
-<h1>Category: {{ cat }}</h1>
+<ol class="postlist">
+    {% for post in posts %}
+        <li class="postlist-item">
+            <a href="{{ post.url }}" class="postlist-link">{{ post.data.title }}</a>
 
+            <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("yyyy LLLL dd.") }}</time>
+        </li>
+    {% endfor %}
+</ol>
 
-
-
-------<br>
-
-{% set postslist = collections[ cat ] %}
-{% include "postslist.njk" %}
-
-<br>------
-
-<p>See <a href="/categories/">all categories</a>.</p>
+<div class="more-posts"><a href="/categories/">View all categories</a></div>

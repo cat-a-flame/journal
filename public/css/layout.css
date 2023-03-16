@@ -52,7 +52,7 @@
 
 .site-header-link:hover .site-header-image,
 .site-header-link:focus .site-header-image {
-    fill: #111;
+    fill: var(--dark-link-color);
 }
 
 .site-header-logo {
@@ -66,7 +66,7 @@
 
 /* Main content */
 .main-content-wrapper {
-    background-color: #fff;
+    background-color: var(--light-bg-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -120,5 +120,5 @@
 }
 
 .footer a {
-    color: #000;
+    color: var(--dark-link-color);
 }

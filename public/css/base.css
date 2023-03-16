@@ -1,11 +1,12 @@
 :root {
     --brand-color: #da0000;
-    --light-purple: #00222b;
-    --dark-purple: #011c23;
     --link-color: #da0000;
     --link-hover-color: #c50202;
     --link-visited-color: #c50202;
+    --dark-link-color: #111;
     --secondary-color: #6e615b;
+    --title-font: "Lora", Georgia, serif;
+    --light-bg-color: #fff;
 }
 
 * {
@@ -17,7 +18,7 @@ body {
     background-image: url(/img/bg.png);
     background-attachment: fixed;
     color: #342d29;
-    font-family: 'Merriweather', serif;
+    font-family: "Merriweather", serif;
     line-height: 1.5;
 }
 
@@ -44,13 +45,13 @@ ol {
     list-style-type: decimal;
 }
 
-ul:not(.post-tags, .site-navigation-list),
+ul:not(.post-tags, .site-navigation-list, .postlist),
 ol {
     margin-left: 3rem;
     margin-bottom: 2rem;
 }
     @media screen and (max-width: 42rem) {
-        ul:not(.post-tags, .site-navigation-list),
+        ul:not(.post-tags, .site-navigation-list, .postlist),
         ol {
             margin-left: 2rem;
         }
@@ -95,37 +96,3 @@ a {
         border-color: var(--link-hover-color);
         text-decoration: none;
     }
-
-table {
-    margin: 1em 0;
-}
-
-table td,
-table th {
-    padding-right: 1em;
-}
-
-pre,
-code {
-    font-family: var(--font-family-monospace);
-}
-
-pre:not([class*="language-"]) {
-    margin: .5em 0;
-    line-height: 1.375;
-    -moz-tab-size: var(--syntax-tab-size);
-    -o-tab-size: var(--syntax-tab-size);
-    tab-size: var(--syntax-tab-size);
-    -webkit-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-}
-
-code {
-    word-break: break-all;
-}

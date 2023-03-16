@@ -76,6 +76,17 @@ module.exports = function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
 
+	eleventyConfig.addCollection("tagList", collections => {
+		const tags = collections
+		  .getAll()
+		  .reduce((tags, item) => tags.concat(item.data.tags), [])
+		  .filter(tag => !!tag && !["posts", "all"].includes(tag))
+		  .sort()
+		return Array.from(new Set(tags)).map(tag => ({
+		  title: tag,
+		  count: collections.getFilteredByTag(tag),
+		}))
+	  })
 
 	/* Setting up the categories */
 	eleventyConfig.addFilter('myEscape', s => {
@@ -97,7 +108,7 @@ module.exports = function(eleventyConfig) {
 		let results = [];
 	
 		// handle case issues I'm having
-		cat = cat.toLowerCase();
+		cat = cat;
 		for(let post of posts) {
 			if(post.data.categories.indexOf(cat) >= 0) results.push(post);
 		}
@@ -111,7 +122,7 @@ module.exports = function(eleventyConfig) {
 	
 		for(let page of collections.posts) {
 			for(let cat of page.data.categories) {
-				cat = cat.toLowerCase();
+				cat = cat;
 				cats.add(cat);
 			}
 		}
@@ -124,13 +135,11 @@ module.exports = function(eleventyConfig) {
 		let posts = collection.getFilteredByTag("posts");
 		for(let i=0;i<posts.length;i++) {
 			for(let x=0;x<posts[i].data.categories.length;x++) {
-				cats.add(posts[i].data.categories[x].toLowerCase());
+				cats.add(posts[i].data.categories[x]);
 			}
 		}
 		return Array.from(cats).sort();
 	});
-
-
 
 	// Features to make your build faster (when you need them)
 

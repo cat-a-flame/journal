@@ -1,0 +1,46 @@
+.listpage-title {
+    font-family: var(--title-font);
+    font-size: 2.5rem;
+    font-style: italic;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+    @media screen and (max-width: 42rem) {
+        .listpage-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+.postlist-count {
+    color: var(--secondary-color);
+}
+    @media screen and (min-width: 42rem) {
+        .postlist-count {
+            background-color: var(--light-bg-color);
+            padding-left: .625rem;
+            position: relative;
+            z-index: 1;
+        }
+    }
+    @media screen and (max-width: 42rem) {
+        .postlist-count::before {
+            content: "(";
+        }
+        .postlist-count::after {
+            content: ")";
+        }
+    }
+
+.listpage-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+    @media screen and (max-width: 42rem) {
+        .listpage-subtitle {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+    }

@@ -22,6 +22,7 @@ permalink: /feed/feed.xml
 		<link href="{{ absolutePostUrl }}"/>
 		<updated>{{ post.date | readableDate("yyyy LLLL dd.") }}</updated>
 		<id>{{ absolutePostUrl }}</id>
+		{% for cat in post.data.categories %}<category term="{{ cat }}" />{% endfor %}
 		<content type="html">{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) }}</content>
 	</entry>
 	{%- endfor %}

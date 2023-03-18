@@ -2,7 +2,13 @@
 layout: layouts/base.njk
 ---
 <article class="post-article">
+    {% for cat in categories %}
+        <div class="post-category"><a href="/categories/{{ cat | myEscape }}">{{ cat }}</a></div>
+    {% endfor %}
+
     <h1 class="post-title">{{ title }}</h1>
+
+    <p class="post-lead">{{ lead }}</p>
 
     {{ content | safe }}
 

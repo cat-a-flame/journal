@@ -109,7 +109,12 @@
     }
 
 .postlist-previous {
+    background-image: url(/img/divider_small.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 5rem;
     letter-spacing: .2rem;
+    margin-top: 2.5rem;
+    padding-top: 4rem;
     text-transform: uppercase;
-    margin-top: 4rem;
 }

@@ -63,6 +63,12 @@
     height: 3.005rem;
     width: 2.75rem;
 }
+    @media screen and (max-width: 42rem) {
+        .site-header-image {
+            height: 2.4rem;
+            width: 2rem;
+        }
+    }
 
 /* Main content */
 .main-content-wrapper {
@@ -72,6 +78,7 @@
     justify-content: space-between;
     margin: 0 auto;
     max-width: 70rem;
+    min-height: 100vh;
 }
     @media screen and (max-width: 42rem) {
         .main-content-wrapper {
@@ -80,7 +87,6 @@
     }
     @media screen and (min-width: 42rem) {
         .main-content-wrapper {
-            min-height: 100vh;
             padding-inline: 5rem;
         }
     }

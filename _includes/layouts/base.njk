@@ -6,6 +6,23 @@
         <title>{% if title %}{{ title }} | {%endif%} {{ metadata.title }}</title>
         <meta name="description" content="{{ description or metadata.description }}">
 
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@cat_a_flame">
+        <meta name="twitter:creator" content="@cat_a_flame">
+        <meta name="twitter:title" content="{{ title }}">
+        <meta name="twitter:description" content="{{ lead }}">
+        <meta name="twitter:image" content="{{baseURL}}{{ image }}">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="{{ lead }}">
+        <meta property="og:image" content="{{baseURL}}{{ image }}">
+        <meta property="og:url" content="https://journal.stef-nia.me">
+        <meta property="og:site_name" content="{{ title }}">
+        <meta property="og:locale" content="en_GB">
+        <meta property="og:type" content="website">
+
         <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
         <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
         <meta name="generator" content="{{ eleventy.generator }}">

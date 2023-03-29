@@ -1,6 +1,6 @@
 ---
 date: 2023-03-22T10:01:00
-image: "https://picsum.photos/id/102/800/500"
+image: "/blog/images/2023/sketchnoting.jpg"
 title: How to sketchnote books?
 lead: "I have a hard time remembering important information when reading a book or an article, and I'm reading to educate myself. I got frustrated and neglected this habit because of this, and now tons of reading materials are waiting for me to consume them. I tried to find a solution, and this is how I came up with an idea: make skentchnotes!"
 categories: ["How to"]

@@ -19,7 +19,7 @@ body {
     background-attachment: fixed;
     color: #342d29;
     font-family: "Merriweather", serif;
-    line-height: 1.5;
+    line-height: 1.75;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -33,7 +33,7 @@ body {
     width: 1px;
 }
 
-p:not(:last-of-type) {
+p:not(:last-child) {
     margin-bottom: 1.5rem;
 }
 

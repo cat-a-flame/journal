@@ -72,6 +72,7 @@
 
 .post-date {
     color: var(--secondary-color);
+    flex-shrink: 0;
 }
     @media screen and (max-width: 42rem) {
         .post-date {
@@ -81,8 +82,8 @@
     }
 
 .post-tags {
-    align-items: center;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     list-style: none;
 }

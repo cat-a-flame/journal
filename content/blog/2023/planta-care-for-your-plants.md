@@ -12,7 +12,7 @@ Over a year ago, I mustered up the courage to buy two plants: a Snowflower and a
 
 Before choosing these plants, I made sure that the room was suitable for them. We live in a twin house, which means that we don't have windows on the eastern side, making some rooms darker. The air is pretty dry, especially in the winter.
 
-How can you make sure that a room is good for a specific plant? This is where Planta comes in.
+How can you make sure that a room is good for a specific plant? How to make sure they survive? This is where [Planta](https://getplanta.com/) comes in.
 
 Planta is a mobile app that helps you take care of your plants by providing you with all the necessary information and reminders. Whether you are a beginner or a seasoned gardener, Planta can help you keep your plants healthy and thriving.
 
@@ -51,7 +51,7 @@ I have been using the free version for more than a year, and it has served me we
 
 With the premium features, you get more care details, such as fertilizing, cleaning, and repotting. Planta also has a pretty neat premium feature called Dr. Planta, which helps you identify issues with your plant and set up a treatment plan.
 
-In conclusion, Planta is an excellent app for anyone who wants to take care of their plants without feeling overwhelmed. The app’s intuitive interface and personalized care plans make it easy and enjoyable to take care of your plants. With Planta, you can turn your home into a green oasis and enjoy the many benefits of having plants around you.
+In conclusion, [Planta](https://getplanta.com/) is an excellent app for anyone who wants to take care of their plants without feeling overwhelmed. The app’s intuitive interface and personalized care plans make it easy and enjoyable to take care of your plants. With Planta, you can turn your home into a green oasis and enjoy the many benefits of having plants around you.
 
 <figure>
     <picture>

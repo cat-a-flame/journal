@@ -4,7 +4,7 @@ image: "/blog/images/2023/obervellach.jpg"
 title: A week in the Austrian countryside
 lead: "Lately, we have been so tired from work and everyday chores that we decided to take a week off and spend it in the Alps."
 categories: ["Travel"]
-tags: ["Austria", "Obervellach", "Alps", "Carinthia", "hiking"]
+tags: ["Austria", "Obervellach", "Alps", "Carinthia", "Hiking"]
 ---
 
 My partner knew of a great town called Obervellach, where he used to spend a week every summer when he was in elementary school. Since I had never been anywhere else besides Vienna in Austria, it sounded promising to me.

@@ -1,6 +1,6 @@
 ---
 date: 2023-12-30T14:48:00
-image: "/blog/images/2023/sketchnoting.jpg"
+image: "/blog/images/2023/artbusiness1.jpg"
 title: Starting my own art business - part 1.
 lead: "Ever since I was a child, I loved drawing. That's it—no boring, long stories about why I decided to start my own art business. I made this choice because I love creating and sharing it with the world. While it would be nice to make this my primary income, it's not an easy journey."
 categories: ["Art business"]
